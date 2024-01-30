@@ -7,3 +7,6 @@ Code structure:
 - Config:
 
 More information can be found in our [preprint](https://doi.org/10.48550/arXiv.2307.01482).
+
+## Acknowledgement
+Our code is built upon the TorchSpatiotemporal repository (https://github.com/TorchSpatiotemporal/tsl).
