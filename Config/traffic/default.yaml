@@ -1,0 +1,44 @@
+defaults:
+  - _self_
+  - logger: null
+  - dataset: la
+  - model: dcrnn
+
+#### Experiment params ########################################################
+hydra:
+  run:
+    dir: logs/${model.name}/${dataset.name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: logs/${now:%Y-%m-%d-%H-%M-%S}
+    subdir: ${model.name}/${dataset.name}/${hydra.job.num}
+
+seed: 42  # automatically set everywhere the seed
+tags:
+  - 'traffic'
+  - ${model.name}
+  - ${dataset.name}
+
+workers: 0
+num_threads: 1  # limit the number of pytorch threads spawn
+
+logger: null
+
+#### Windowing params #########################################################
+window: 12
+horizon: 12
+stride: 1
+
+#### Training params ##########################################################
+epochs: 300
+patience: 50
+batch_size: 64
+grad_clip_val: 5
+scale_target: False
+
+optimizer:
+  name: Adam
+  hparams:
+    lr: 0.01
+    weight_decay: 0
+
+lr_scheduler: null
