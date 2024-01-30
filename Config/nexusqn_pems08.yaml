@@ -1,0 +1,45 @@
+defaults:
+  - default
+  - _self_
+
+
+seed: 42
+dataset:
+  name: pems8
+  splitting:
+    val_len: 0.1
+    test_len: 0.2
+  connectivity:
+    method: distance
+    threshold: 0.1
+    include_self: false
+    layout: edge_index
+window: 12
+horizon: 12
+stride: 1
+model:
+  name: nexusqn
+  hparams:
+    input_window_size: 12
+    input_embedding_dim: 128
+    activation: gelu
+    st_embd: false
+    node_dim: 96
+    num_layer: 2
+epochs: 100
+patience: 30
+batch_size: 32 
+grad_clip_val: 5
+optimizer:
+  name: Adam
+  hparams:
+    lr: 0.003 
+    weight_decay: 0
+lr_scheduler:
+  name: MultiStepLR
+  hparams:
+    gamma: 0.1
+    milestones:
+    - 40
+    - 60
+
