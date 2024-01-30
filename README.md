@@ -9,7 +9,8 @@ Code structure:
   - traffic:
     - default
     - nexusqn_pems08.yaml
-run_traffic_benchmark.py
+      
+main file: run_traffic_benchmark.py
 
 More information can be found in our [preprint](https://doi.org/10.48550/arXiv.2307.01482).
 
