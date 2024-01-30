@@ -6,7 +6,10 @@ Code structure:
   - mlp.py
   - embedding.py
 - Config:
-  - nexusqn_pems08.yaml
+  - traffic:
+    - default
+    - nexusqn_pems08.yaml
+run_traffic_benchmark.py
 
 More information can be found in our [preprint](https://doi.org/10.48550/arXiv.2307.01482).
 
