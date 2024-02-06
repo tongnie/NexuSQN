@@ -1,4 +1,4 @@
-# Repository for ''Spatiotemporally Contextualizing MLP-Mixers for Urban Data Forecast at Scale''  
+# Repository for ''Contextualizing MLP-Mixers Spatiotemporally for Urban Data Forecast at Scale''  
 
 Code structure:  
 - Model:
