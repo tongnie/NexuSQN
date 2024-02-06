@@ -107,7 +107,7 @@ class NexuSQNModel(BaseModel):
 
         # x: (batch_size, ..., length, model_dim)
         residual = x
-        # message passing
+        # space mxing
         x = et@x  # [c n] * [n c] -> [c c]
         x = e@x  # [n c] * [c c] -> [n c]
         x = self.linear(x)  # [b n c]
