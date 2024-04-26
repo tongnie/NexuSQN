@@ -12,7 +12,7 @@ Code structure:
       
 main file: run_traffic_benchmark.py
 
-The appendix can be found at [appendix.pdf]()
+The appendix can be found at [urban_forecast_appendix.pdf](https://github.com/tongnie/NexuSQN/blob/main/urban_forecast_appendix.pdf)
 
 More information can be found in our [preprint](https://doi.org/10.48550/arXiv.2307.01482).
 
